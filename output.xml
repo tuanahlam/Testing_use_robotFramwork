@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.9 on win32)" generated="20230522 09:55:43.174" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="D:\Dell\OneDrive\Desktop\practice\TestScript\Test.robot">
+<test id="s1-t1" name="Test Cases4" line="9">
+<kw name="Open Browser TO Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230522 09:55:43.572" level="INFO">Opening browser 'chrome' to base url 'https://www.myorder.ai/auth/login'.</msg>
+<msg timestamp="20230522 09:55:43.598" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<status status="PASS" starttime="20230522 09:55:43.571" endtime="20230522 09:55:51.387"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230522 09:55:51.387" endtime="20230522 09:55:51.592"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELEY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230522 09:55:51.592" endtime="20230522 09:55:51.593"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="email-input"]</arg>
+<arg>test12@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:55:51.594" level="INFO">Typing text 'test12@gmail.com' into text field '//*[@id="email-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:55:51.593" endtime="20230522 09:55:54.910"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//*[@id="password-input"]</arg>
+<arg>Ahlam2023!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:55:54.911" level="INFO">Typing password into text field '//*[@id="password-input"]'.</msg>
+<msg timestamp="20230522 09:55:57.067" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230522 09:55:58.294" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230522 09:55:54.910" endtime="20230522 09:55:58.295"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:55:58.297" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:55:58.295" endtime="20230522 09:56:03.693"/>
+</kw>
+<status status="PASS" starttime="20230522 09:55:43.571" endtime="20230522 09:56:03.693"/>
+</kw>
+<kw name="PageSelectTeam Should be open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>MyOrder</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230522 09:56:04.722" level="INFO">Page title is 'MyOrder'.</msg>
+<status status="PASS" starttime="20230522 09:56:03.695" endtime="20230522 09:56:04.722"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:03.694" endtime="20230522 09:56:04.722"/>
+</kw>
+<kw name="Select Team" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="646aa380497806001821bf2e"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:04.724" level="INFO">Clicking element '//*[@id="646aa380497806001821bf2e"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:04.723" endtime="20230522 09:56:06.901"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${OtherSell}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230522 09:56:06.902" level="INFO">Opening url 'https://www.myorder.ai/order/other-sell'</msg>
+<status status="PASS" starttime="20230522 09:56:06.901" endtime="20230522 09:56:10.225"/>
+</kw>
+<kw name="PageOtherSell Should be open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>MyOrder</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230522 09:56:12.218" level="INFO">Page title is 'MyOrder'.</msg>
+<status status="PASS" starttime="20230522 09:56:10.226" endtime="20230522 09:56:12.218"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:10.225" endtime="20230522 09:56:12.219"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:04.722" endtime="20230522 09:56:12.219"/>
+</kw>
+<kw name="Loop For cash on delivery" library="resource">
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>1</value>
+<value>10</value>
+<iter>
+<var name="${index}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:12.225" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[1]'.</msg>
+<status status="PASS" starttime="20230522 09:56:12.223" endtime="20230522 09:56:14.513"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:14.518" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:14.513" endtime="20230522 09:56:20.501"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:20.504" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:20.503" endtime="20230522 09:56:22.911"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:22.912" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:22.911" endtime="20230522 09:56:26.223"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:26.226" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:26.223" endtime="20230522 09:56:35.940"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:35.942" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:56:35.940" endtime="20230522 09:56:39.731"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:39.734" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:56:39.732" endtime="20230522 09:56:43.145"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:43.147" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:56:43.146" endtime="20230522 09:56:45.620"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:45.622" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:45.620" endtime="20230522 09:56:47.915"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:47.917" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:56:47.915" endtime="20230522 09:56:50.032"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:43.145" endtime="20230522 09:56:50.033"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:12.222" endtime="20230522 09:56:50.033"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:50.036" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:56:50.034" endtime="20230522 09:56:52.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:52.302" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:52.301" endtime="20230522 09:56:55.932"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:55.933" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:55.932" endtime="20230522 09:56:58.132"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:56:58.134" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:56:58.132" endtime="20230522 09:57:01.366"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:01.368" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:01.366" endtime="20230522 09:57:10.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:10.747" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:57:10.746" endtime="20230522 09:57:13.899"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:13.900" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:57:13.899" endtime="20230522 09:57:17.061"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:17.063" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:57:17.062" endtime="20230522 09:57:19.164"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:19.165" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:19.164" endtime="20230522 09:57:21.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:21.250" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:57:21.249" endtime="20230522 09:57:23.317"/>
+</kw>
+<status status="PASS" starttime="20230522 09:57:17.061" endtime="20230522 09:57:23.318"/>
+</kw>
+<status status="PASS" starttime="20230522 09:56:50.034" endtime="20230522 09:57:23.318"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:23.320" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[3]'.</msg>
+<status status="PASS" starttime="20230522 09:57:23.319" endtime="20230522 09:57:25.417"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:25.418" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:25.417" endtime="20230522 09:57:28.877"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:28.877" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:28.877" endtime="20230522 09:57:30.950"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:30.952" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:30.952" endtime="20230522 09:57:34.039"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:34.039" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:34.039" endtime="20230522 09:57:43.230"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:43.231" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:57:43.230" endtime="20230522 09:57:46.381"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:46.382" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:57:46.381" endtime="20230522 09:57:49.527"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:49.528" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:57:49.527" endtime="20230522 09:57:51.627"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:51.628" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:51.627" endtime="20230522 09:57:53.703"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:53.704" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:57:53.703" endtime="20230522 09:57:55.804"/>
+</kw>
+<status status="PASS" starttime="20230522 09:57:49.527" endtime="20230522 09:57:55.804"/>
+</kw>
+<status status="PASS" starttime="20230522 09:57:23.318" endtime="20230522 09:57:55.804"/>
+</iter>
+<iter>
+<var name="${index}">4</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:55.806" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[4]'.</msg>
+<status status="PASS" starttime="20230522 09:57:55.805" endtime="20230522 09:57:57.905"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:57:57.906" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:57:57.905" endtime="20230522 09:58:01.362"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:01.364" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:01.362" endtime="20230522 09:58:03.508"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:03.509" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:03.508" endtime="20230522 09:58:06.591"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:06.592" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:06.591" endtime="20230522 09:58:15.794"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:15.795" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:58:15.794" endtime="20230522 09:58:18.963"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:18.964" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:58:18.963" endtime="20230522 09:58:22.097"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:22.099" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:58:22.099" endtime="20230522 09:58:24.231"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:24.232" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:24.231" endtime="20230522 09:58:26.333"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:26.334" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:58:26.333" endtime="20230522 09:58:28.416"/>
+</kw>
+<status status="PASS" starttime="20230522 09:58:22.097" endtime="20230522 09:58:28.417"/>
+</kw>
+<status status="PASS" starttime="20230522 09:57:55.804" endtime="20230522 09:58:28.417"/>
+</iter>
+<iter>
+<var name="${index}">5</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:28.419" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[5]'.</msg>
+<status status="PASS" starttime="20230522 09:58:28.418" endtime="20230522 09:58:30.502"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:30.504" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:30.502" endtime="20230522 09:58:33.898"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:33.899" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:33.898" endtime="20230522 09:58:35.971"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:35.972" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:35.971" endtime="20230522 09:58:39.062"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:39.062" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:39.062" endtime="20230522 09:58:48.253"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:48.254" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:58:48.253" endtime="20230522 09:58:51.418"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:51.419" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:58:51.418" endtime="20230522 09:58:54.568"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:54.569" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:58:54.568" endtime="20230522 09:58:56.641"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:56.641" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:58:56.641" endtime="20230522 09:58:58.696"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:58:58.697" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:58:58.696" endtime="20230522 09:59:00.750"/>
+</kw>
+<status status="PASS" starttime="20230522 09:58:54.568" endtime="20230522 09:59:00.750"/>
+</kw>
+<status status="PASS" starttime="20230522 09:58:28.417" endtime="20230522 09:59:00.750"/>
+</iter>
+<iter>
+<var name="${index}">6</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:00.752" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[6]'.</msg>
+<status status="PASS" starttime="20230522 09:59:00.751" endtime="20230522 09:59:02.844"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:02.845" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:02.844" endtime="20230522 09:59:06.134"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:06.135" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:06.134" endtime="20230522 09:59:08.200"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:08.201" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:08.200" endtime="20230522 09:59:11.273"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:11.274" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:11.273" endtime="20230522 09:59:20.444"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:20.445" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:59:20.444" endtime="20230522 09:59:23.576"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:23.577" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:59:23.576" endtime="20230522 09:59:26.723"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:26.724" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:59:26.724" endtime="20230522 09:59:28.801"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:28.803" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:28.801" endtime="20230522 09:59:30.888"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:30.889" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 09:59:30.888" endtime="20230522 09:59:33.002"/>
+</kw>
+<status status="PASS" starttime="20230522 09:59:26.723" endtime="20230522 09:59:33.003"/>
+</kw>
+<status status="PASS" starttime="20230522 09:59:00.751" endtime="20230522 09:59:33.003"/>
+</iter>
+<iter>
+<var name="${index}">7</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:33.007" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[7]'.</msg>
+<status status="PASS" starttime="20230522 09:59:33.003" endtime="20230522 09:59:35.262"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:35.263" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:35.262" endtime="20230522 09:59:38.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:38.701" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:38.700" endtime="20230522 09:59:40.813"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:40.813" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:40.813" endtime="20230522 09:59:43.888"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:43.889" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 09:59:43.888" endtime="20230522 09:59:53.135"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:53.136" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:59:53.135" endtime="20230522 09:59:56.282"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:56.283" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 09:59:56.282" endtime="20230522 09:59:59.461"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 09:59:59.463" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 09:59:59.462" endtime="20230522 10:00:01.576"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:01.576" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:01.576" endtime="20230522 10:00:03.653"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:03.654" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 10:00:03.653" endtime="20230522 10:00:05.749"/>
+</kw>
+<status status="PASS" starttime="20230522 09:59:59.461" endtime="20230522 10:00:05.749"/>
+</kw>
+<status status="PASS" starttime="20230522 09:59:33.003" endtime="20230522 10:00:05.749"/>
+</iter>
+<iter>
+<var name="${index}">8</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:05.750" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[8]'.</msg>
+<status status="PASS" starttime="20230522 10:00:05.749" endtime="20230522 10:00:07.853"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:07.854" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:07.853" endtime="20230522 10:00:11.366"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:11.367" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:11.366" endtime="20230522 10:00:13.454"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:13.455" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:13.454" endtime="20230522 10:00:16.599"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:16.600" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:16.599" endtime="20230522 10:00:25.917"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:25.918" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 10:00:25.917" endtime="20230522 10:00:29.092"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:29.093" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 10:00:29.092" endtime="20230522 10:00:32.320"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:32.322" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 10:00:32.321" endtime="20230522 10:00:34.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:34.398" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:34.398" endtime="20230522 10:00:36.476"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:36.476" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 10:00:36.476" endtime="20230522 10:00:38.547"/>
+</kw>
+<status status="PASS" starttime="20230522 10:00:32.320" endtime="20230522 10:00:38.547"/>
+</kw>
+<status status="PASS" starttime="20230522 10:00:05.749" endtime="20230522 10:00:38.547"/>
+</iter>
+<iter>
+<var name="${index}">9</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[${index}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:38.548" level="INFO">Clicking element 'xpath://*[@id="content-main-page"]/app-other-sell/div/div[1]/div[3]/div/div/div[9]'.</msg>
+<status status="PASS" starttime="20230522 10:00:38.547" endtime="20230522 10:00:40.635"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="address-detect-input"]</arg>
+<arg>คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:40.636" level="INFO">Typing text 'คุณมายด์ออเดอร์ ผู้น่ารัก 0831725655 69/429 หมู่ 2 ต.วิชิต อ.เมือง จ.ภูเก็ต 83000' into text field '//*[@id="address-detect-input"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:40.635" endtime="20230522 10:00:44.098"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="system-product-add"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:44.099" level="INFO">Clicking element '//*[@id="system-product-add"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:44.098" endtime="20230522 10:00:46.179"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>//*[@id="646aa42792f3ca00123112e5-add-amount"]</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:46.180" level="INFO">Clicking image '//*[@id="646aa42792f3ca00123112e5-add-amount"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:46.179" endtime="20230522 10:00:49.257"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="select-product-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:49.257" level="INFO">Clicking button '//*[@id="select-product-button"]'.</msg>
+<status status="PASS" starttime="20230522 10:00:49.257" endtime="20230522 10:00:58.472"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:00:58.474" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20230522 10:00:58.472" endtime="20230522 10:01:01.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input</arg>
+<arg>30</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:01.620" level="INFO">Typing text '30' into text field '//*[@id="content-main-page"]/app-other-sell/div/div[1]/div[5]/div[3]/app-other-sell-manage-basket/div/div[2]/div/div[2]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20230522 10:01:01.619" endtime="20230522 10:01:04.752"/>
+</kw>
+<kw name="cash on delivery" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:04.753" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 10:01:04.753" endtime="20230522 10:01:06.853"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cod"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:06.855" level="INFO">Clicking element '//*[@id="cod"]'.</msg>
+<status status="PASS" starttime="20230522 10:01:06.853" endtime="20230522 10:01:08.954"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:08.954" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 10:01:08.954" endtime="20230522 10:01:11.036"/>
+</kw>
+<status status="PASS" starttime="20230522 10:01:04.752" endtime="20230522 10:01:11.036"/>
+</kw>
+<status status="PASS" starttime="20230522 10:00:38.547" endtime="20230522 10:01:11.036"/>
+</iter>
+<status status="PASS" starttime="20230522 09:56:12.222" endtime="20230522 10:01:11.037"/>
+</for>
+<status status="PASS" starttime="20230522 09:56:12.221" endtime="20230522 10:01:11.037"/>
+</kw>
+<kw name="Payment Method" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="payment-type-input"]/app-dropdown/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:11.039" level="INFO">Clicking element '//*[@id="payment-type-input"]/app-dropdown/div'.</msg>
+<status status="PASS" starttime="20230522 10:01:11.038" endtime="20230522 10:01:13.185"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="bank"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:13.186" level="INFO">Clicking element '//*[@id="bank"]'.</msg>
+<status status="PASS" starttime="20230522 10:01:13.185" endtime="20230522 10:01:15.335"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>xpath://div[@class='has-sample focused ng-star-inserted']/label/input[@type='file']</arg>
+<arg>${ImageFilePath}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230522 10:01:15.338" level="INFO">Sending D:\Dell\OneDrive\Desktop\practice\TestScript\slip2.jpg to browser.</msg>
+<status status="PASS" starttime="20230522 10:01:15.335" endtime="20230522 10:01:17.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="cancel-order-button"]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 10:01:17.416" level="INFO">Clicking element '//*[@id="cancel-order-button"]/div[2]'.</msg>
+<status status="PASS" starttime="20230522 10:01:17.415" endtime="20230522 10:01:19.498"/>
+</kw>
+<status status="PASS" starttime="20230522 10:01:11.038" endtime="20230522 10:01:19.498"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230522 10:01:24.508" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230522 10:01:19.499" endtime="20230522 10:01:24.508"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230522 10:01:24.511" endtime="20230522 10:01:27.686"/>
+</kw>
+<status status="PASS" starttime="20230522 09:55:43.570" endtime="20230522 10:01:27.686"/>
+</test>
+<status status="PASS" starttime="20230522 09:55:43.177" endtime="20230522 10:01:27.689"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
